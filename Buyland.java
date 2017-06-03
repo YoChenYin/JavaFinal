@@ -14,7 +14,7 @@ public class Buyland extends MouseAdapter implements ActionListener{
 		JPanel background;
 		JLabel button1 , button2;
 		frame = new JFrame("要不要買地?");
-		frame.setSize(750, 450);
+		frame.setSize(500, 300);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frame.setLayout(null);
@@ -32,8 +32,8 @@ public class Buyland extends MouseAdapter implements ActionListener{
 		
 		/********start button**********/
 		button1 = new JLabel(new ImageIcon("buybt.png"));
-		button1.setLocation(320, 310);
-		button1.setSize(200, 200);
+		button1.setLocation(100, 140);
+		button1.setSize(100, 100);
 		button1.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
@@ -44,8 +44,8 @@ public class Buyland extends MouseAdapter implements ActionListener{
 		
 		/******exit button*******/
 		button2 = new JLabel(new ImageIcon("notbuybt.png"));
-		button2.setLocation(500, 390);
-		button2.setSize(200, 200);
+		button2.setLocation(290, 140);
+		button2.setSize(100, 100);
 		button2.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
