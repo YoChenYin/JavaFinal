@@ -4,17 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Buyland extends MouseAdapter implements ActionListener{
+
+public class Buildhouse extends MouseAdapter implements ActionListener{
 	
+	public static boolean build;
 
-	public static int buy = 2;
-
-	public static void buyornot(){
+	public static void buildornot(){
 
 		JFrame frame;
 		JPanel background;
 		JLabel button1 , button2;
-		frame = new JFrame("要不要買地?");
+		frame = new JFrame("要不要蓋房子?");
 		frame.setSize(666, 400);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
@@ -27,7 +27,7 @@ public class Buyland extends MouseAdapter implements ActionListener{
 			 * 
 			 */
 			private static final long serialVersionUID = 1L;
-		Image image1 = new ImageIcon("pic/buyornotbg.png").getImage();
+		Image image1 = new ImageIcon("pic/buildornotbg.png").getImage();
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
 				g.drawImage(image1, 0, 0, getWidth(), getHeight(), this);
@@ -37,25 +37,25 @@ public class Buyland extends MouseAdapter implements ActionListener{
 		frame.setContentPane(background);
 		
 		/********start button**********/
-		button1 = new JLabel(new ImageIcon("pic/buybt.png"));
-		button1.setLocation(166, 240);
+		button1 = new JLabel(new ImageIcon("pic/buildbt.png"));
+		button1.setLocation(166, 260);
 		button1.setSize(80, 80);
 		button1.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				buy=1;
+				build=true;
 			}
 				
 		});
 		
 		/******exit button*******/
-		button2 = new JLabel(new ImageIcon("pic/notbuybt.png"));
-		button2.setLocation(420, 240);
+		button2 = new JLabel(new ImageIcon("pic/notbuildbt.png"));
+		button2.setLocation(420, 260);
 		button2.setSize(80, 80);
 		button2.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				buy=0;
+				build=false;
 			}
 				
 		});
